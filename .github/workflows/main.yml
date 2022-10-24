@@ -20,7 +20,7 @@ jobs:
       - name: Publish .Net Core Project
         run: dotnet publish Logico/Logico.csproj -c Release -o release --nologo
       - name: Change base-tag in index.html from / to Logico
-      - run: sed -i 's/<base href="\/" \/>/<base href="\/Logico\/" \/>/g' 
+        run: sed -i 's/<base href="\/" \/>/<base href="\/Logico\/" \/>/g' 
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
